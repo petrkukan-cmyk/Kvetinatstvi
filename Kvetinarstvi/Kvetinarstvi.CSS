@@ -1,0 +1,254 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f6f3;
+  color: #3e3e3e;
+  line-height: 1.6;
+  padding-bottom: 200px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: #d6ccc2;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #333333;
+}
+
+nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #3e3e3e;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #8a817c;
+}
+
+.hero {
+  position: relative;
+  background: url('https://cdn.pixabay.com/photo/2017/08/06/00/06/flowers-2588040_1280.jpg') center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.4), rgba(0,0,0,0.2));
+}
+
+.hero-text {
+  position: relative;
+  max-width: 600px;
+  animation: fadeInUp 1s ease both;
+}
+
+.hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #a68c7c;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #8a817c;
+  transform: translateY(-2px);
+}
+
+section {
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeIn 1s ease both;
+}
+
+.section-alt {
+  background-color: #d6ccc2;
+}
+
+h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #333333;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.service-card i {
+  font-size: 2rem;
+  color: #a68c7c;
+  margin-bottom: 1rem;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.testimonial {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.testimonial img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: -30px;
+  left: 2rem;
+  border: 3px solid #ffffff;
+}
+
+.testimonial blockquote {
+  margin-top: 2rem;
+  font-style: italic;
+}
+
+.newsletter {
+  text-align: center;
+}
+
+.newsletter input[type="email"] {
+  padding: 0.75rem 1rem;
+  width: 60%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+.newsletter button {
+  padding: 0.75rem 1rem;
+  border: none;
+  background-color: #a68c7c;
+  color: #ffffff;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.newsletter button:hover {
+  background-color: #8a817c;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  background-color: #f1eee9;
+  text-align: center;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #d6ccc2;
+  text-align: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+}
+
+footer .social {
+  margin-top: 0.5rem;
+}
+
+footer .social a {
+  margin: 0 0.5rem;
+  color: #3e3e3e;
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+footer .social a:hover {
+  color: #a68c7c;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
